@@ -1,0 +1,25 @@
+#NAMESPACE#
+
+/// <summary>
+/// ---------------------------
+///	Author : Zaoyu
+/// ---------------------------
+/// </summary>
+namespace Name
+{
+	public class #CLASSNAME# : View
+	{
+        //此处需要重新设置缓存优先级
+        public override eCachePriority CachePriority => eCachePriority.NORMAL;
+        //需要重新设置视图id
+        public override eVIEW_ID ViewId => eVIEW_ID.Null;
+        //需要重新设置层级
+        public override eUILayerType LayerType => eUILayerType.Default;
+#FIELD_BIND#
+        public override void OnInited()
+        {
+            base.OnInited();
+#METHOD_BIND#
+        }
+	}
+}
